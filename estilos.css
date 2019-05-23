@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+
+.carpeta{
+	margin-top: 18px;
+	width: 333px;
+	height: 200px;
+}
+
+ video{
+	
+	margin-left: 27%;
+	 margin-top: 5%;
+	width:40%;
+	height: 35%;
+	
+
+}
+
+/*.menu a{
+ 
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}*/
+
+
+
+.atras a{
+	margin: 7px 20px;
+	color: #333;
+}
+
+.atras a:hover{
+	color: #696464;
+}
+
+.memoria{
+	margin-left: 25px;
+	margin-top: 20px;
+	width: 30%;
+	height: 30%;
+}
+
+.fav{
+	margin-left: 50%;
+	
+}
+
+.fav:hover{
+	text-decoration: none;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+ <link href="prueba.css" rel="stylesheet" type="text/css">
+	 <link href="estilos.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script>
+	// Array con todas las imágenes que deseamos que se vayan cambiando a
+	// cada clic
+	var imagenes=Array("heart-solid.png", "heart-regular.png");
+	var imagenVisible=0;
+ 
+	// Función que cambia la imagen actual por la siguiente
+	function cambiar(img)
+	{
+		imagenVisible++;
+		if(imagenVisible>=imagenes.length)
+		{
+			imagenVisible=0;
+		}
+		img.src=imagenes[imagenVisible];
+		cargarSiguienteImagen();
+	}
+ 
+	/**
+	 * Esta función carga la siguiente imagen para no tener que esperar su carga
+	 * en el momento de mostrarla.
+	 */
+	function cargarSiguienteImagen()
+	{
+		if((imagenVisible+1)<imagenes.length)
+		{
+			console.log(imagenVisible+1);
+			var imgTmp=new Image();
+			imgTmp.src=imagenes[imagenVisible+1];
+		}
+	}
+ 
+	window.onload=function() {
+		cargarSiguienteImagen();
+	}
+	</script>
+ 
+	<style>
+	img {cursor:pointer;}
+	</style>
+
+</head>
+
+<body>	
+	
+		 <div class="menu">
+			 <div class="atras">
+			 	<a href="favoritos.html"><i class="fas fa-chevron-left"></i></a>
+			 </div>
+			 
+    <img src="heart-solid.png" onclick="cambiar(this);">
+	 
+  </div> 
+		
+	
+		<video src="video/You’ll Never Walk Alone _ Liverpool 4-0 Barcelona _ Miracle at Anfield.mp4"  preload controls></video> 
+	
+	 
+</body>
+</html>
